@@ -1,0 +1,83 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    overflow: hidden;
+    background: radial-gradient(
+        circle at bottom,
+        #35104c,
+        #10051e,
+        #000
+    );
+    color: white;
+    font-family: Georgia, serif;
+}
+
+#fireworks {
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: 90%;
+    z-index: 2;
+}
+
+.diya {
+    font-size: 85px;
+    animation: glow 1.5s infinite alternate;
+}
+
+h1 {
+    font-size: clamp(35px, 8vw, 75px);
+    color: gold;
+    text-shadow: 0 0 10px orange,
+                 0 0 30px gold,
+                 0 0 60px orange;
+    animation: glow 2s infinite alternate;
+}
+
+h2 {
+    margin: 20px;
+    color: #ffcc66;
+}
+
+p {
+    font-size: 18px;
+    margin: 20px;
+}
+
+button {
+    padding: 14px 30px;
+    border: 2px solid gold;
+    border-radius: 30px;
+    background: linear-gradient(45deg, orange, gold);
+    color: #240b18;
+    font-size: 17px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+button:hover {
+    transform: scale(1.1);
+}
+
+@keyframes glow {
+    from {
+        filter: brightness(0.8);
+    }
+    to {
+        filter: brightness(1.5);
+    }
+}
